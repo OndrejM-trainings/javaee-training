@@ -11,6 +11,7 @@ import javax.annotation.PostConstruct;
 import javax.ejb.EJB;
 import javax.ejb.Singleton;
 import javax.ejb.Startup;
+import javax.inject.Inject;
 
 /**
  * <p>Singleton bean that initializes the book database for the bookstore
@@ -20,7 +21,7 @@ import javax.ejb.Startup;
 @Startup
 public class ConfigBean {
 
-    @EJB
+    @Inject
     private BookRequestBean request;
 
     @PostConstruct
