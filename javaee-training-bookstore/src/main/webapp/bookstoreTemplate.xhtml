@@ -22,14 +22,29 @@
         </h:head>
 
         <h:body>
+        	<div id="cartInfo" class="cartInfo" align="left">
+        	    <h:panelGroup style="display: inline-block;
+        	    					border-style: solid;
+    								border-width: 5px;">
+        	    	#{bundle.Caption} : #{cart.numberOfItems}
+        	    	<br/>
+        	    	#{bundle.Amount} : #{cart.total}
+        	    	<br/>
+        	    	<a href="bookshowcart.xhtml">  #{bundle.EditCart} </a>
+                 </h:panelGroup>
+            </div>
             <div id="top" class="top" align="center" 
                  style="background-color: white;">
+                 
                 <h1>
+                <a href="index.xhtml" style="color: black">
                     Duke's 
                     <h:graphicImage name="duke.books.gif" 
                                     library="images" alt="Duke holding books"/>
                     Bookstore
+                    </a>
                 </h1> 
+                
                 <ui:insert name="top" />
             </div>
 
